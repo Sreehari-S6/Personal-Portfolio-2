@@ -6,7 +6,7 @@ export interface PersonalInfo {
   location: string;
   email: string;
   linkedinUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   profileImage: string;
   resumeFile: string;
 }
