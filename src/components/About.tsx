@@ -36,7 +36,7 @@ function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 bg-[#0B0B0B] px-6 py-24 text-white"
+      className="scroll-mt-24 bg-[var(--section-bg)] px-6 py-24 text-[var(--primary-text)]"
     >
       <div className="mx-auto max-w-7xl">
 
@@ -55,15 +55,15 @@ function About() {
 
           {/* Introduction */}
           <div>
-            <h3 className="mb-5 text-2xl font-semibold">
+            <h3 className="mb-5 text-2xl font-semibold text-[var(--primary-text)]">
               A little about who I am.
             </h3>
 
-            <p className="mb-5 text-base leading-8 text-gray-400">
+            <p className="mb-5 text-base leading-8 text-[var(--secondary-text)]">
               {personalInfo.about}
             </p>
 
-            <p className="text-base leading-8 text-gray-400">
+            <p className="text-base leading-8 text-[var(--secondary-text)]">
               My goal is to strengthen my development skills,
               gain practical industry experience, and contribute
               to building useful web applications.
@@ -71,7 +71,7 @@ function About() {
 
             {/* Soft Skills */}
             <div className="mt-8">
-              <h4 className="mb-4 text-lg font-semibold">
+              <h4 className="mb-4 text-lg font-semibold text-[var(--primary-text)]">
                 Personal Strengths
               </h4>
 
@@ -79,7 +79,7 @@ function About() {
                 {softSkills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 transition hover:border-yellow-400/50 hover:text-yellow-400"
+                    className="rounded-full border border-[var(--border-color)] bg-[var(--card-bg)] px-4 py-2 text-sm text-[var(--secondary-text)] transition hover:border-yellow-400/50 hover:text-yellow-400"
                   >
                     {skill}
                   </span>
@@ -96,18 +96,18 @@ function About() {
               return (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-white/10 bg-[#141414] p-6 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
+                  className="rounded-2xl border border-[var(--border-color)] bg-[var(--card-bg)] p-6 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
                 >
                   <Icon
                     size={30}
                     className="mb-5 text-yellow-400"
                   />
 
-                  <h4 className="mb-2 text-lg font-semibold">
+                  <h4 className="mb-2 text-lg font-semibold text-[var(--primary-text)]">
                     {item.title}
                   </h4>
 
-                  <p className="text-sm leading-6 text-gray-400">
+                  <p className="text-sm leading-6 text-[var(--secondary-text)]">
                     {item.description}
                   </p>
                 </div>
@@ -117,8 +117,8 @@ function About() {
         </div>
 
         {/* Interests */}
-        <div className="mt-16 border-t border-white/10 pt-8">
-          <h3 className="mb-5 text-xl font-semibold">
+        <div className="mt-16 border-t border-[var(--border-color)] pt-8">
+          <h3 className="mb-5 text-xl font-semibold text-[var(--primary-text)]">
             Beyond Development
           </h3>
 
@@ -126,7 +126,7 @@ function About() {
             {interests.map((interest) => (
               <span
                 key={interest}
-                className="rounded-lg bg-[#191919] px-4 py-3 text-sm text-gray-300"
+                className="rounded-lg border border-[var(--border-color)] bg-[var(--card-bg)] px-4 py-3 text-sm text-[var(--secondary-text)]"
               >
                 {interest}
               </span>
