@@ -103,3 +103,134 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Dark and Light Theme Variables */
+
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #050505;
+  --section-bg: #0a0a0a;
+  --card-bg: #111111;
+  --primary-text: #ffffff;
+  --secondary-text: #a1a1aa;
+  --muted-text: #71717a;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --accent: #facc15;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --page-bg: #f8fafc;
+  --section-bg: #ffffff;
+  --card-bg: #f1f5f9;
+  --primary-text: #111827;
+  --secondary-text: #4b5563;
+  --muted-text: #6b7280;
+  --border-color: rgba(15, 23, 42, 0.12);
+  --accent: #b77900;
+}
+
+/* ========================================
+   LIGHT THEME COMPATIBILITY
+======================================== */
+
+html[data-theme="light"] body {
+  background-color: var(--page-bg);
+  color: var(--primary-text);
+}
+
+/* Navbar */
+html[data-theme="light"] header {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: var(--border-color) !important;
+}
+
+html[data-theme="light"] header a,
+html[data-theme="light"] header button {
+  color: var(--primary-text);
+}
+
+/* Main sections */
+html[data-theme="light"] main section {
+  background-color: var(--section-bg) !important;
+  color: var(--primary-text) !important;
+}
+
+/* Headings and primary text */
+html[data-theme="light"] section .text-white {
+  color: var(--primary-text) !important;
+}
+
+/* Secondary text */
+html[data-theme="light"] section .text-gray-300,
+html[data-theme="light"] section .text-gray-400,
+html[data-theme="light"] section .text-gray-500 {
+  color: var(--secondary-text) !important;
+}
+
+/* Cards */
+html[data-theme="light"] section [class*="bg-white/"] {
+  background-color: var(--card-bg) !important;
+}
+
+/* Borders */
+html[data-theme="light"] section [class*="border-white/"] {
+  border-color: var(--border-color) !important;
+}
+
+/* Inputs */
+html[data-theme="light"] input,
+html[data-theme="light"] textarea {
+  background-color: var(--input-bg);
+  color: var(--primary-text);
+  border-color: var(--border-color);
+}
+
+/* ========================================
+   SMOOTH THEME TRANSITION
+======================================== */
+
+html,
+body,
+#root,
+header,
+nav,
+main,
+section,
+footer,
+article,
+div,
+a,
+button,
+input,
+textarea {
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body,
+  #root,
+  header,
+  nav,
+  main,
+  section,
+  footer,
+  article,
+  div,
+  a,
+  button,
+  input,
+  textarea {
+    transition: none !important;
+  }
+}
