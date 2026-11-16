@@ -1,4 +1,3 @@
-
 @import "tailwindcss";
 
 /* =========================
@@ -103,7 +102,6 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
-
 
 /* Dark and Light Theme Variables */
 
