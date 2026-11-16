@@ -1,13 +1,6 @@
-
 import { useState } from "react";
-import {
-  Menu,
-  X,
-  ArrowUpRight,
-  Sun,
-  Moon,
-} from "lucide-react";
-import { useTheme } from "./ThemeProvider";
+import { Menu, X, ArrowUpRight, Sun, Moon } from "lucide-react";
+import { useTheme } from "./useTheme";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -33,13 +26,8 @@ function Navbar() {
       className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-lg"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-
         {/* Logo */}
-        <a
-          href="#home"
-          onClick={closeMenu}
-          className="text-xl font-bold tracking-wider text-white"
-        >
+        <a href="#home" onClick={closeMenu} className="text-xl font-bold tracking-wider text-white">
           SREEHARI<span className="text-yellow-400">.</span>
         </a>
 
@@ -58,7 +46,6 @@ function Navbar() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-4 lg:flex">
-
           {/* Theme Toggle */}
           <button
             type="button"
@@ -67,11 +54,7 @@ function Navbar() {
             title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             className="rounded-full border border-white/20 p-2 text-yellow-400 transition hover:border-yellow-400 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-yellow-400"
           >
-            {theme === "dark" ? (
-              <Sun size={19} />
-            ) : (
-              <Moon size={19} />
-            )}
+            {theme === "dark" ? <Sun size={19} /> : <Moon size={19} />}
           </button>
 
           <a
@@ -84,7 +67,6 @@ function Navbar() {
 
         {/* Mobile Actions */}
         <div className="flex items-center gap-4 lg:hidden">
-
           {/* Mobile Theme Toggle */}
           <button
             type="button"
@@ -93,11 +75,7 @@ function Navbar() {
             title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
             className="rounded-full border border-white/20 p-2 text-yellow-400 transition hover:border-yellow-400 focus-visible:outline-2 focus-visible:outline-yellow-400"
           >
-            {theme === "dark" ? (
-              <Sun size={19} />
-            ) : (
-              <Moon size={19} />
-            )}
+            {theme === "dark" ? <Sun size={19} /> : <Moon size={19} />}
           </button>
 
           {/* Mobile Menu Button */}

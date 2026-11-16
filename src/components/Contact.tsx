@@ -1,10 +1,5 @@
-
 import { useState } from "react";
-import {
-  Mail,
-  MapPin,
-  Send,
-} from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 import { personalInfo } from "../data/personal";
 
 function Contact() {
@@ -17,9 +12,7 @@ function Contact() {
 
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -42,12 +35,8 @@ function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-[#111111] px-6 py-24 text-white lg:px-10"
-    >
+    <section id="contact" className="bg-[#111111] px-6 py-24 text-white lg:px-10">
       <div className="mx-auto max-w-7xl">
-
         {/* Heading */}
         <div className="mb-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">
@@ -59,21 +48,17 @@ function Contact() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-gray-400">
-            Have a project idea or an opportunity? Feel free to get in touch.
-            I'd be happy to connect.
+            Have a project idea or an opportunity? Feel free to get in touch. I'd be happy to
+            connect.
           </p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
-
           {/* Contact Information */}
           <div>
-            <h3 className="mb-6 text-2xl font-semibold">
-              Contact Information
-            </h3>
+            <h3 className="mb-6 text-2xl font-semibold">Contact Information</h3>
 
             <div className="space-y-6">
-
               <a
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center gap-4 text-gray-400 transition-colors hover:text-yellow-400"
@@ -103,7 +88,6 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-400 transition-colors hover:text-yellow-400"
               >
-                
                 <div>
                   <p className="text-sm text-gray-500">GitHub</p>
                   <p>Visit my GitHub profile</p>
@@ -116,24 +100,19 @@ function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-gray-400 transition-colors hover:text-yellow-400"
               >
-            
                 <div>
                   <p className="text-sm text-gray-500">LinkedIn</p>
                   <p>Connect with me</p>
                 </div>
               </a>
-
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="rounded-2xl border border-white/10 bg-[#0a0a0a] p-6 md:p-8">
-            <h3 className="mb-6 text-2xl font-semibold">
-              Send a Message
-            </h3>
+            <h3 className="mb-6 text-2xl font-semibold">Send a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
-
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm text-gray-300">
                   Your Name
@@ -214,7 +193,6 @@ function Contact() {
                   Thank you! Your message has been submitted successfully.
                 </p>
               )}
-
             </form>
           </div>
         </div>

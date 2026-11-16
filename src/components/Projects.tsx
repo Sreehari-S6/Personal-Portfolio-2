@@ -1,13 +1,9 @@
-
 import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="bg-[#0a0a0a] px-6 py-24 text-white lg:px-10"
-    >
+    <section id="projects" className="bg-[#0a0a0a] px-6 py-24 text-white lg:px-10">
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
         <div className="mb-14">
@@ -20,8 +16,7 @@ function Projects() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-gray-400">
-            A selection of projects that demonstrate my development skills
-            and practical experience.
+            A selection of projects that demonstrate my development skills and practical experience.
           </p>
         </div>
 

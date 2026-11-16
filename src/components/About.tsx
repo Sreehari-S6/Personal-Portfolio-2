@@ -1,13 +1,7 @@
-
 import { personalInfo } from "../data/personal";
 import { softSkills } from "../data/skills";
 import { interests } from "../data/achievements";
-import {
-  GraduationCap,
-  Code2,
-  Lightbulb,
-  Camera,
-} from "lucide-react";
+import { GraduationCap, Code2, Lightbulb, Camera } from "lucide-react";
 
 const highlights = [
   {
@@ -39,7 +33,6 @@ function About() {
       className="scroll-mt-24 bg-[var(--section-bg)] px-6 py-24 text-[var(--primary-text)]"
     >
       <div className="mx-auto max-w-7xl">
-
         {/* Section Heading */}
         <div className="mb-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">
@@ -52,7 +45,6 @@ function About() {
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
-
           {/* Introduction */}
           <div>
             <h3 className="mb-5 text-2xl font-semibold text-[var(--primary-text)]">
@@ -64,9 +56,8 @@ function About() {
             </p>
 
             <p className="text-base leading-8 text-[var(--secondary-text)]">
-              My goal is to strengthen my development skills,
-              gain practical industry experience, and contribute
-              to building useful web applications.
+              My goal is to strengthen my development skills, gain practical industry experience,
+              and contribute to building useful web applications.
             </p>
 
             {/* Soft Skills */}
@@ -98,10 +89,7 @@ function About() {
                   key={item.title}
                   className="rounded-2xl border border-[var(--border-color)] bg-[var(--card-bg)] p-6 transition duration-300 hover:-translate-y-1 hover:border-yellow-400/40"
                 >
-                  <Icon
-                    size={30}
-                    className="mb-5 text-yellow-400"
-                  />
+                  <Icon size={30} className="mb-5 text-yellow-400" />
 
                   <h4 className="mb-2 text-lg font-semibold text-[var(--primary-text)]">
                     {item.title}
@@ -133,7 +121,6 @@ function About() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );

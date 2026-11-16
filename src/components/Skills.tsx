@@ -1,4 +1,3 @@
-
 import { Code2, Server, Database, Users } from "lucide-react";
 import { skillGroups } from "../data/skills";
 
@@ -6,10 +5,7 @@ const categoryIcons = [Code2, Server, Database, Users];
 
 function Skills() {
   return (
-    <section
-      id="skills"
-      className="bg-[#0a0a0a] px-6 py-24 text-white lg:px-10"
-    >
+    <section id="skills" className="bg-[#0a0a0a] px-6 py-24 text-white lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-yellow-400">
@@ -21,8 +17,7 @@ function Skills() {
           </h2>
 
           <p className="mt-4 max-w-2xl text-gray-400">
-            Technologies and tools I use to build practical web applications
-            and solve problems.
+            Technologies and tools I use to build practical web applications and solve problems.
           </p>
         </div>
 
@@ -39,9 +34,7 @@ function Skills() {
                   <Icon size={25} />
                 </div>
 
-                <h3 className="mb-5 text-xl font-semibold">
-                  {group.category}
-                </h3>
+                <h3 className="mb-5 text-xl font-semibold">{group.category}</h3>
 
                 <div className="flex flex-wrap gap-3">
                   {group.skills.map((skill) => (

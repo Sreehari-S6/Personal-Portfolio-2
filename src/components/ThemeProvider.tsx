@@ -1,19 +1,9 @@
-
-
-import { createContext, useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
-
-type Theme = "dark" | "light";
-
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-};
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+import { ThemeContext } from "./ThemeContext";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
     const savedTheme = localStorage.getItem("portfolio-theme");
     return savedTheme === "light" ? "light" : "dark";
   });
@@ -27,19 +17,5 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme((current) => (current === "dark" ? "light" : "dark"));
   };
 
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext);
-
-  if (!context) {
-    throw new Error("useTheme must be used inside ThemeProvider");
-  }
-
-  return context;
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 }
