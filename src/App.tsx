@@ -1,10 +1,24 @@
+
+import { useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/home";
 import { ThemeProvider } from "./components/ThemeProvider";
+import TerminalLoader from "./components/TerminalLoader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  const handleLoaderComplete = useCallback(() => {
+    setLoading(false);
+  }, []);
+
   return (
     <ThemeProvider>
+      {loading && (
+        <TerminalLoader onComplete={handleLoaderComplete} />
+      )}
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
