@@ -1,10 +1,12 @@
+
 import type { Project } from "../types/portfolio";
 
 export const projects: Project[] = [
   {
     id: "pc-parts-ecommerce",
     title: "PC Parts Configuration and Online Parts Purchasing System",
-    summary: "A web platform for custom PC assembly and component-based e-commerce.",
+    summary:
+      "A web platform for custom PC assembly and component-based e-commerce.",
     description:
       "Developed a web platform for custom PC assembly and online component purchasing. The application includes backend logic for checking PC component compatibility and a MySQL database for products, user configurations, and orders.",
     technologies: ["PHP", "MySQL", "HTML", "CSS"],
@@ -15,12 +17,14 @@ export const projects: Project[] = [
       "Interactive virtual PC-building interface",
     ],
     image: "/images/projects/pc-parts-project.jpg",
-    // Add verified repository and demo URLs when available.
+    demoUrl: "http://bydcomputers.infinityfree.io/?i=1",
   },
   {
     id: "logistics-management",
-    title: "Logistics Management: Centralized Platform for Cargo Transportation Through Ships",
-    summary: "A centralized web platform for managing cargo transportation through ships.",
+    title:
+      "Logistics Management: Centralized Platform for Cargo Transportation Through Ships",
+    summary:
+      "A centralized web platform for managing cargo transportation through ships.",
     description:
       "Developed a centralized cargo transportation management platform with backend functionality built using Django and database operations handled through MySQL. The project focuses on user-friendly interfaces and workflows.",
     technologies: ["Python", "Django", "MySQL", "HTML", "CSS"],
@@ -31,7 +35,7 @@ export const projects: Project[] = [
       "User-friendly interfaces and workflows",
     ],
     image: "/images/projects/logistics-project.jpg",
-    // Add verified repository and demo URLs when available.
+    githubUrl: "https://github.com/Sreehari-S6/LogiNeX",
   },
   {
     id: "react-user-management-dashboard",
@@ -40,7 +44,14 @@ export const projects: Project[] = [
       "A React and TypeScript dashboard for browsing, searching, sorting, and filtering user records.",
     description:
       "Built a user-management interface using React and TypeScript. It retrieves sample user records from the JSONPlaceholder users endpoint and presents them in a data grid, with navigation to an individual user's detail page.",
-    technologies: ["React", "TypeScript", "React Router", "AG Grid", "Fetch API", "CSS"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "React Router",
+      "AG Grid",
+      "Fetch API",
+      "CSS",
+    ],
     features: [
       "Fetches user data from JSONPlaceholder",
       "Debounced search across name, username, and email",
@@ -51,7 +62,7 @@ export const projects: Project[] = [
       "Dark-mode interface",
     ],
     image: "/images/projects/user-management-dashboard.jpg",
-    statusNote:
-      "Confirm each listed feature against the final code and add verified GitHub/live-demo links before publishing.",
+    githubUrl:
+      "https://github.com/Sreehari-S6/User-Management-Dashboard",
   },
 ];
