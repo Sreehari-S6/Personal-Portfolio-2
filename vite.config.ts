@@ -3,8 +3,7 @@ import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(), tailwindcss()],
-  base: "/Personal-Portfolio-2/",
-});
+  base: mode === "github" ? "/Personal-Portfolio-2/" : "/",
+}));
