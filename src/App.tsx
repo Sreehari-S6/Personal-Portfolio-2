@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -19,11 +19,11 @@ function App() {
         <TerminalLoader onComplete={handleLoaderComplete} />
       )}
 
-      <HashRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
