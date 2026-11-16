@@ -1,4 +1,7 @@
+
 import type { PersonalInfo } from "../types/portfolio";
+
+const baseUrl = import.meta.env.BASE_URL;
 
 export const personalInfo: PersonalInfo = {
   name: "Sreehari S",
@@ -11,8 +14,7 @@ export const personalInfo: PersonalInfo = {
   email: "sreeharisajeev2006@gmail.com",
   linkedinUrl: "https://www.linkedin.com/in/sreehari-s06",
   githubUrl: "https://github.com/Sreehari-S6",
-  // Add your photo at public/images/profile.jpg
-  profileImage: "/images/profile.jpg",
-  // Add a portfolio-safe CV copy at public/resume.pdf
-  resumeFile: "/resume.pdf",
+
+  profileImage: `${baseUrl}images/profile.jpg`,
+  resumeFile: `${baseUrl}resume.pdf`,
 };

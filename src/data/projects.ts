@@ -1,6 +1,8 @@
 
 import type { Project } from "../types/portfolio";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 export const projects: Project[] = [
   {
     id: "pc-parts-ecommerce",
@@ -16,7 +18,7 @@ export const projects: Project[] = [
       "Order-handling functionality",
       "Interactive virtual PC-building interface",
     ],
-    image: "/images/projects/pc-parts-project.jpg",
+    image: `${baseUrl}images/projects/pc-parts-project.jpg`,
     demoUrl: "http://bydcomputers.infinityfree.io/?i=1",
   },
   {
@@ -34,7 +36,7 @@ export const projects: Project[] = [
       "Database operations using MySQL",
       "User-friendly interfaces and workflows",
     ],
-    image: "/images/projects/logistics-project.jpg",
+    image: `${baseUrl}images/projects/logistics-project.jpg`,
     githubUrl: "https://github.com/Sreehari-S6/LogiNeX",
   },
   {
@@ -61,7 +63,7 @@ export const projects: Project[] = [
       "Navigation to individual user detail pages",
       "Dark-mode interface",
     ],
-    image: "/images/projects/user-management-dashboard.jpg",
+    image: `${baseUrl}images/projects/user-management-dashboard.jpg`,
     githubUrl:
       "https://github.com/Sreehari-S6/User-Management-Dashboard",
   },
