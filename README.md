@@ -1,75 +1,152 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio built with **React, TypeScript, and Tailwind CSS** to showcase my technical skills, development projects, education, and achievements as a Full Stack Developer.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** [https://sreehari-s-dev.vercel.app](https://sreehari-s-dev.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This portfolio is designed to present my development journey, technical capabilities, and practical project experience through a modern and interactive user interface.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+It includes a custom terminal-style boot animation, interactive project and skill showcases, light and dark themes, and an EmailJS-powered contact form.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Modern UI:** Clean, responsive portfolio design with a dark and light theme.
+- **Terminal Boot Animation:** Custom Linux-style terminal loading sequence displayed during application initialization.
+- **Theme Switching:** Toggle between light and dark themes with preference persistence.
+- **About Section:** Personal introduction and professional background.
+- **Skills Showcase:** Technology-specific skill cards with corresponding logos and descriptions.
+- **Projects Showcase:** Display of development projects with technology tags, GitHub repositories, and live demo links.
+- **Education & Achievements:** Dedicated sections highlighting academic background and achievements.
+- **Contact Form:** EmailJS integration for sending messages directly through the portfolio.
+- **Form Validation:** Input validation and submission status feedback.
+- **Responsive Layout:** Optimized for mobile, tablet, and desktop screens.
+- **Client-side Routing:** Navigation using React Router.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies Used
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Technology | Purpose |
+|---|---|
+| React | Component-based frontend development |
+| TypeScript | Type-safe application development |
+| Vite | Development server and build tool |
+| Tailwind CSS | Responsive UI styling |
+| React Router DOM | Client-side navigation |
+| Lucide React | Interface icons |
+| React Icons | Technology logos in skill cards |
+| EmailJS | Contact form email integration |
+| Jest | Unit testing |
+| React Testing Library | Component testing |
+| Vercel | Application deployment |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Projects Featured
 
+### 1. Computer Assembly and E-Commerce
+
+A web application for computer component configuration and online parts purchasing.
+
+- **Live Demo:** [View Website](https://bydcomputers.infinityfree.me/)
+
+### 2. LogiNeX – Logistics Management System
+
+A logistics management application developed to manage transportation-related operations.
+
+- **GitHub:** [View Repository](https://github.com/Sreehari-S6/LogiNeX)
+
+### 3. React User Management Dashboard
+
+A React-based dashboard demonstrating user data management, API integration, searching, sorting, filtering, and pagination.
+
+- **GitHub:** [View Repository](https://github.com/Sreehari-S6/User-Management-Dashboard)
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- npm
+- Git
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Sreehari-S6/Personal-Portfolio-2.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Personal-Portfolio-2
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Configure the environment variables as explained below.
+
+5. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+6. Open the local URL provided by Vite in your browser.
+
+## Environment Variables
+
+The contact form uses **EmailJS** to send messages without requiring a custom backend server.
+
+Create a `.env.local` file in the project's root directory and configure the following variables:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Replace the placeholder values with your own EmailJS configuration.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Important:** Never commit `.env.local` or actual credentials to GitHub. Keep environment variables private and configure the required values in your deployment platform.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Testing
 
+The project uses Jest and React Testing Library for component and application testing.
+
+Run the test suite:
+
+```bash
+npm test
 ```
+
+Generate a production build:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The portfolio is deployed using **Vercel**.
+
+**Live Website:** [https://sreehari-s-dev.vercel.app](https://sreehari-s-dev.vercel.app)
+
+Make sure the required EmailJS environment variables are configured in Vercel for the contact form to work in production.
+
+## Author
+
+**Sreehari S.**
+
+- **GitHub:** [Sreehari-S6](https://github.com/Sreehari-S6)
+- **Portfolio:** [Visit Website](https://sreehari-s-dev.vercel.app)
+
+---
+
+Built with React, TypeScript, and a passion for web development.
