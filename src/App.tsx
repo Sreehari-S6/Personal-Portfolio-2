@@ -1,6 +1,6 @@
 
 import { useState, useCallback } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/home";
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -19,11 +19,11 @@ function App() {
         <TerminalLoader onComplete={handleLoaderComplete} />
       )}
 
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
